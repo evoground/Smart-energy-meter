@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<title>Dashboard</title>
+
+	<link rel="stylesheet" href="{{ url_for('static',filename = 'css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename = 'css/animate.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename = 'css/font-awesome.min1.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename = 'css/component.css') }}">
+	
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/owl.theme.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename = 'css/owl.carousel.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename = 'css/vegas.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename = 'css/style2.css') }}">
+
+	<!-- Google web font  -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	
+  <style type="text/css">
+    
+    .seeAll
+    {
+      border: none;
+      width: 150px;
+      height: 40px;
+      font-size: 20px;
+      font-weight: 350;
+      font-family: 'Ubuntu';
+      letter-spacing: 5px;
+      margin-left: 600px;
+    }
+    .seeAll:hover
+    {
+      background: #b9b4b4;
+    }
+
+    li:hover
+    {
+      color: #e7e7e7;
+      background-color:  #dedcdc;
+    }
+    .h1-data
+    {
+      color: #9c9c9c;
+      text-shadow: 3px 3px 5px #d4cece;
+      font-weight: 600;
+
+    }
+    .h1-data:hover
+    {
+      transform: translateY(2px);
+      color: #e85e75;
+      transform: translateX(2px;);
+    }
+
+    span
+    {
+      color: #e44c65;
+    }
+    .fa-facebook
+    {
+      background-image: url("{{ url_for('static',filename = 'img/facebook-icn.png') }}");
+    }
+
+  </style>
+
+
+</head>
+<body id="top" data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+
+<!-- Preloader section -->
+
+<div class="preloader">
+     <div class="sk-spinner sk-spinner-pulse"></div>
+</div><br><br>
+<!-- Navigation section  -->
+
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+        </button>
+        <a href="#top" class="navbar-brand smoothScroll">Dashboard</a>
+      </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for('change_password')}}" class="smoothScroll"><span>Change Password</span></a></li>
+            <li><a href="{{ url_for('logout')}}" class="smoothScroll"><span>Logout</span></a></li>
+          </ul>
+       </div>
+    </div>
+  </div>
+
+
+<!-- Home section -->
+
+<section id="home">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+        <h1 class="wow fadeInUp" data-wow-delay="0.6s">Admin</h1><hr>
+        <p class="wow fadeInUp" data-wow-delay="0.9s">Welcome to Dashboard !</p>
+        <a href="#about" class="smoothScroll btn btn-success btn-lg wow fadeInUp" data-wow-delay="1.2s">Scorll Down to Know More</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Field 1 -->
+<section id="about" style="margin-top: -40px;">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-9 col-sm-8 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="about-thumb" style="box-shadow: 3px 3px 5px #d4cece;">
+          <h1 class="h1-data">Unit Consumed : <span>360 units</span></h1>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-4 wow fadeInUp about-img" data-wow-delay="0.6s" style="margin-left: -200px;margin-top: 10px;">
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;box-shadow: 3px 3px 5px #d4cece;" src="https://thingspeak.com/channels/529198/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+      </div>
+
+    </div>
+
+</section>
+
+
+<!-- Field 2 -->
+<section id="about" style="margin-top: -100px;">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-9 col-sm-8 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="about-thumb" style="box-shadow: 3px 3px 5px #d4cece;">
+          <a href=""><h1 class="h1-data">Current : <span>23 Amp</span></h1></a>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-4 wow fadeInUp about-img" data-wow-delay="0.6s" style="margin-left: -200px;margin-top: 10px;">
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;box-shadow: 3px 3px 5px #d4cece;" src="https://thingspeak.com/channels/529198/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+      </div>
+    </div>
+
+</section>
+
+
+<!-- Field 3 -->
+<section id="about" style="margin-top: -100px;">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-9 col-sm-8 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="about-thumb" style="box-shadow: 3px 3px 5px #d4cece;">
+          <a href=""><h1 class="h1-data">Price: <span>2400 rs</span></h1></a>
+
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-4 wow fadeInUp about-img" data-wow-delay="0.6s" style="margin-left: -200px;margin-top: 10px;">
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;box-shadow: 3px 3px 5px #d4cece;" src="https://thingspeak.com/channels/529198/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+      </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- Contact section -->
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+
+       <div class="col-md-offset-1 col-md-10 col-sm-12">
+
+        <div class="col-lg-offset-1 col-lg-10 section-title wow fadeInUp" data-wow-delay="0.4s">
+          <h1>Send a message</h1>
+          <p>Send a message from here.</p>
+        </div>
+
+        <form action="/dashboard" method="POST" class="wow fadeInUp" data-wow-delay="0.8s">
+          <div class="col-md-6 col-sm-6">
+            <input name="Name" type="text" class="form-control" id="name" placeholder="Name">
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <input name="Email" type="email" class="form-control" id="email" placeholder="Email">
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <textarea name="Msg" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+          </div>
+          <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+            <input type="submit" class="form-control" value="SEND MESSAGE">
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer section -->
+
+<footer>
+	<div class="container">
+    
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+          
+				<p class="wow fadeInUp"  data-wow-delay="1s" >Copyright &copy; 2019 IoT</p>
+                
+			</div>
+			
+		</div>
+        
+	</div>
+</footer>
+
+<!-- Back top -->
+<a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+
+<!-- Javascript  -->
+<script src="{{ url_for('static',filename = 'js/jquery.js') }}"></script>
+<script src="{{ url_for('static',filename = 'js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename = 'js/vegas.min.js') }}"></script>
+<script src="{{ url_for('static',filename = 'js/modernizr.custom.js') }}"></script>
+<script src="{{ url_for('static',filename = 'js/toucheffects.js') }}"></script>
+<script src="{{ url_for('static',filename = 'js/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static',filename = 'js/smoothscroll.js') }}"></script>
+<script src="{{ url_for('static',filename = 'js/wow.min.js') }}"></script>
+<script src="{{ url_for('static',filename = 'js/custom.js') }}"></script>
+
+</body>
+</html>
